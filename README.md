@@ -1,3 +1,7 @@
+> **LG webOS in this fork:** the adapted launcher, Windows installer, AirPlay tile,
+> and Home/wake companion are in [webos/](webos/README.md). The Android tooling below
+> remains separate. For LG privacy settings, follow [the LG guide](https://cleanyour.tv/not-android#lg).
+
 <p align="center">
   <a href="https://cleanyour.tv"><img src="https://raw.githubusercontent.com/Gathin23/cleanyourtv/main/docs/banner.png" alt="CleanYourTV. Your TV, minus the ads. Strip the bloatware from any Android TV or Google TV over Wi-Fi and replace the ad-filled home screen with a clean launcher that looks like an Apple TV. No root, no cable, nothing uninstalled, and a one-line restore." width="800"></a>
 </p>
@@ -567,7 +571,9 @@ in `KNOWN_STOCK_LAUNCHERS`: `com.google.android.tvlauncher`, `com.google.android
 contains the app that owns Home and no other app on the TV answers HOME, it skips that entry, says
 why, and disables the rest of the list. The setup wizard, the settings apps, a vendor `FallbackHome`
 and factory-test apps (Xiaomi's `com.duokan.factorytest`) answer HOME too and don't count. So a list applied before the launcher handover cannot leave
-the TV with nothing to start. Run the same list again once `launcher/build-and-install.sh` has made
+the TV with nothing to start. On Google TV it also keeps the owner while setupwraith answers HOME and
+stays enabled (not listed, or kept for the Wi-Fi network): setupwraith answers ahead of an installed
+launcher that is not Home yet, so it would take Home. Run the same list again once `launcher/build-and-install.sh` has made
 the new launcher Home and the entry is applied; `FORCE_HOME=1` (`$env:FORCE_HOME`) disables it anyway.
 
 </details>

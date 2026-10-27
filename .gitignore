@@ -15,6 +15,7 @@ traces/
 # Results from tools/bench.py: result.json carries the address the run was given and the TV's fingerprint.
 bench-results/
 .DS_Store
+.idea/
 
 # Generated install bundles and JVM crash reports stay out of contributions.
 *.apk

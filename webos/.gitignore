@@ -1,0 +1,13 @@
+# Device authentication and generated files stay local.
+.lgtv-key.json
+.env
+venv/
+__pycache__/
+build/
+*.ipk
+.home-watch*.log
+app/apps.js
+app/icons/
+app/icon.png
+app/largeIcon.png
+.DS_Store
